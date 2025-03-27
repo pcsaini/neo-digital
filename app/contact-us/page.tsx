@@ -2,9 +2,9 @@ const ContactUs = () => {
     return <>
 
 
-        <div className="">
+        <div className="bg-black ">
 
-            <section className="bg-black py-12 px-6">
+            <section className="container m-auto py-12 px-6">
                 <div className="mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 
@@ -33,7 +33,7 @@ const ContactUs = () => {
 
 
 
-            <section className="bg-black py-12 px-6">
+            <section className="container m-auto py-12 px-6">
                 <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
 
                     <div className="w-full flex justify-center">

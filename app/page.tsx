@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="bg-black">
 
-      <div className="text-white py-16 px-6">
+      <div className="container m-auto text-white py-16 px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mx-auto items-center justify-between">
 
           <div className="text-center lg:text-left">
@@ -27,7 +27,7 @@ export default function Home() {
       </div>
 
 
-      <div className="container text-center py-16 px-4">
+      <div className="container m-auto text-center py-16 px-4">
 
         <h1 className="text-white text-4xl md:text-4xl font-extrabold">
           Lorem Ipsum <span className="text-teal-400">Dummy Text</span> Demo
@@ -73,7 +73,9 @@ export default function Home() {
           <h3 className="text-primary-foreground text-md pb-2 font-semibold text-3xl">We have the</h3>
           <p className="text-primary-foreground text-md pb-2 font-semibold">NEO DIGITAL is a team of talented developers committed to affordable, quality, full-scope development services, A to Z!</p>
           <p className="text-primary-foreground text-md pb-2 font-semibold"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          {/* <button className="bg-white text-black text-md font-semibold rounded-3xl p-3">Start Now</button> */}
+          <button className="mt-6 bg-white text-black font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-200 transition">
+            Read More
+          </button>
         </div>
 
         <div className=""></div>
@@ -81,15 +83,15 @@ export default function Home() {
       </div>
 
 
-      <div className="py-16 px-4">
+      <div className="container m-auto py-16 px-4">
 
         <h1 className="text-white text-4xl md:text-4xl font-extrabold text-center">
           Lorem Ipsum <span className="text-teal-400">Dummy Text</span> Demo</h1>
         <div className="w-40 h-1 bg-teal-400 mx-auto my-4"></div>
         <p className="text-gray-300 text-lg text-center">Lorem Ipsum is simply dummy text of the printing</p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-10">
-          <div className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto border-b-4 border-green-500">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+          <div className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto border-b-6 border-teal-500">
             <div className="flex items-center space-x-4">
               <div className="w-14 h-14 flex items-center justify-center bg-teal-100 rounded-full">
                 <span className="text-teal-600 text-xl font-semibold">01</span>
@@ -103,7 +105,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto border-b-4 border-green-500">
+          <div className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto border-b-6 border-teal-500">
             <div className="flex items-center space-x-4">
               <div className="w-14 h-14 flex items-center justify-center bg-teal-100 rounded-full">
                 <span className="text-teal-600 text-xl font-semibold">02</span>
@@ -118,7 +120,7 @@ export default function Home() {
           </div>
 
 
-          <div className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto border-b-4 border-green-500">
+          <div className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto border-b-6 border-teal-500">
             <div className="flex items-center space-x-4">
               <div className="w-14 h-14 flex items-center justify-center bg-teal-100 rounded-full">
                 <span className="text-teal-600 text-xl font-semibold">03</span>
@@ -136,7 +138,7 @@ export default function Home() {
       </div>
 
 
-      <div className="bg-black text-center py-16 relative">
+      <div className="container m-auto bg-black text-center py-16 relative">
 
         <div className="absolute inset-0 bg-[url('https://source.unsplash.com/1600x900/?stars,space')] opacity-20"></div>
 

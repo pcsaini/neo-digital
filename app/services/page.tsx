@@ -19,8 +19,7 @@ const servicesData = [
             {
                 icon: "services-icons.svg",
                 title: "Web Development Technology",
-                description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-
+                description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the of the 1500s.",
             },
             {
                 icon: "services-icons.svg",
@@ -217,11 +216,13 @@ const Services = () => {
                 </div>
             </section>
 
-            <div className="container mx-auto px-6 py-12 text-center">
+
+
+            <div className="container grid mx-auto px-6 py-12 text-center">
                 <p className="text-sm text-primary-foreground uppercase font-semibold">Services of <span className="text-teal-400 font-semibold">NEO</span> Digital</p>
                 <h2 className="text-3xl font-bold mt-2 text-primary-foreground">Lorem Ipsum Simply Dummy Text</h2>
 
-                <div className="relative flex flex-col md:flex-row items-center justify-center mt-12 gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-1 lg:grid-cols-5 justify-items-center mt-12 gap-6">
                     <div className="text-center max-w-xs">
                         <div className="bg-white p-4 rounded-lg inline-block shadow-lg">
                             <img src="step-1.png" alt="Icon 1" />
@@ -230,7 +231,9 @@ const Services = () => {
                         <p className="text-gray-300 mt-2 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     </div>
 
-                    <div className="hidden md:block absolute border-dashed border-t-2 border-gray-400 w-50 top-10 left-1/3"></div>
+                    <div className="hidden lg:block w-80 top-10 left-1/3">
+                    <img src="arc-2.png" alt="Arc" className="w-full max-w-xs sm:max-w-sm md:max-w-md" />
+                    </div>
 
                     <div className="text-center max-w-xs">
                         <div className="bg-white p-4 rounded-lg inline-block shadow-lg">
@@ -240,7 +243,9 @@ const Services = () => {
                         <p className="text-gray-300 mt-2 text-sm">It is a long established fact that a reader will be distracted by the readable content.</p>
                     </div>
 
-                    <div className="hidden md:block absolute border-dashed border-t-2 border-gray-400 w-50 top-10 right-1/3"></div>
+                    <div className="hidden lg:block w-80 top-10 left-1/3">
+                    <img src="arc-1.png" alt="Arc" className="w-full max-w-xs sm:max-w-sm md:max-w-md pt-10 mt-10" />
+                    </div>
 
                     <div className="text-center max-w-xs">
                         <div className="bg-white p-4 rounded-lg inline-block shadow-lg">
@@ -252,7 +257,9 @@ const Services = () => {
                 </div>
             </div>
 
-            <section className="bg-black text-center py-16 relative">
+
+
+            <section className="container m-auto bg-black text-center py-16 relative">
 
                 <div className="absolute inset-0 bg-[url('https://source.unsplash.com/1600x900/?stars,space')] opacity-20"></div>
 
@@ -267,10 +274,12 @@ const Services = () => {
                     </button>
                 </div>
             </section>
+
+
         </div>
 
         <Dialog open={viewDialog} onOpenChange={setViewDialog}>
-            <DialogContent className="lg:max-w-[900px]">
+            <DialogContent className="lg:max-w-[1200px]">
                 <DialogHeader>
                     <DialogTitle>{serviceContent?.title!}</DialogTitle>
                     <DialogDescription>
@@ -293,7 +302,7 @@ const Services = () => {
                                     </div>
                                 </div>
 
-                                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                                     {serviceContent.services?.map((service, index) => (
                                         <div key={index} className="bg-gray-100 p-6 rounded-xl text-black shadow-md" >
                                             <div className="flex items-center space-x-4">

@@ -2,9 +2,9 @@ const AboutUs = () => {
     return <>
 
 
-        <div className="">
+        <div className="bg-black">
 
-            <section className="bg-black text-white py-10 px-6 md:px-12">
+            <section className="container m-auto text-white m-auto py-10 px-6 md:px-12">
                 <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
 
                     <div className="">
@@ -32,7 +32,7 @@ const AboutUs = () => {
 
 
 
-            <section className="bg-black text-white py-10 px-6 md:px-12">
+            <section className="container m-auto text-white m-auto py-10 px-6 md:px-12">
                 <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
 
                     <div className="text-center lg:text-left">
@@ -62,7 +62,7 @@ const AboutUs = () => {
             <section className="relative bg-[url(/about-count-img.jpg)] bg-cover bg-center bg-no-repeat py-10 px-6 md:px-12">
                 <div className="absolute inset-0 bg-black/50"></div>
 
-                <div className="relative mx-auto text-center text-white">
+                <div className="container m-auto relative mx-auto text-center text-white">
 
                     <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-8">
                         Lorem Ipsum Of Simply Dummy Text
@@ -135,7 +135,7 @@ const AboutUs = () => {
 
 
 
-            <section className="relative bg-black py-10 px-6">
+            <section className="container m-auto relative bg-black py-10 px-6">
                 <div className=" mx-auto">
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
@@ -179,7 +179,7 @@ const AboutUs = () => {
 
 
 
-            <section className="bg-black text-center py-10 relative">
+            <section className="container m-auto text-center py-10 relative">
 
                 <div className="absolute inset-0 bg-[url('https://source.unsplash.com/1600x900/?stars,space')] opacity-20"></div>
 
