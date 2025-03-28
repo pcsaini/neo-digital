@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -38,7 +39,7 @@ export default function Home() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
 
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden text-left">
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden text-left transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
             <img src="demo-img-1.png" alt="Tech Image" className="w-full h-56 object-cover" />
             <div className="p-4">
               <h3 className="text-lg font-semibold">Web & Mobile Application</h3>
@@ -47,7 +48,7 @@ export default function Home() {
           </div>
 
 
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden text-left">
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden text-left transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
             <img src="demo-img-1.png" alt="Tech Image" className="w-full h-56 object-cover" />
             <div className="p-4">
               <h3 className="text-lg font-semibold">Web & Mobile Application</h3>
@@ -56,7 +57,7 @@ export default function Home() {
           </div>
 
 
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden text-left">
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden text-left transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
             <img src="demo-img-1.png" alt="Tech Image" className="w-full h-56 object-cover" />
             <div className="p-4">
               <h3 className="text-lg font-semibold">Web & Mobile Application</h3>
@@ -67,7 +68,7 @@ export default function Home() {
       </div>
 
 
-      <div className="grid grid-cols-2 bg-[url(/story-img.jpg)] bg-cover relative h-150">
+      {/* <div className="grid grid-cols-2 bg-[url(/story-img.jpg)] bg-cover relative h-150">
         <div className="absolute top-1/2 left-5 transform -translate-y-1/2 max-w-3xl p-5">
           <h5 className="text-primary-foreground text-md pb-2 font-semibold text-xl">Story Of <span className="text-teal-400 font-bold">NEO</span> DIGITAL </h5>
           <h3 className="text-primary-foreground text-md pb-2 font-semibold text-3xl">We have the</h3>
@@ -80,7 +81,40 @@ export default function Home() {
 
         <div className=""></div>
 
-      </div>
+      </div> */}
+
+
+      <section className="relative flex items-center bg-black h-150">
+        <div className="absolute inset-0 bg-[url(/story-img.jpg)] bg-cover bg-center"></div>
+
+        <div className="container relative z-10 max-w-3xl px-6 text-white md:px-12 lg:px-16">
+          <h4 className="text-sm font-semibold tracking-wider text-white-400">
+            STORY OF <span className="text-teal-400">NEO</span> DIGITAL
+          </h4>
+          <h2 className="mt-2 text-2xl font-bold md:text-4xl lg:text-4xl">
+            We Have The
+          </h2>
+          <p className="mt-4 text-base leading-relaxed md:text-lg">
+            NEO DIGITAL is a team of talented developers committed to affordable,
+            quality, full-scope development services, A to Z!
+          </p>
+          <p className="mt-4 text-sm text-gray-300 md:text-base">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text ever
+            since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.
+          </p>
+
+
+          <div className="mt-6">
+            <Link href={"/about-us"}>
+              <button className="px-6 py-2 text-black font-semibold bg-white rounded-full shadow-md hover:bg-gray-300">
+                Read More
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
 
       <div className="container m-auto py-16 px-4">
@@ -147,10 +181,12 @@ export default function Home() {
             Lorem Ipsum <span className="text-teal-400">Dummy Text</span> Demo
           </h1>
           <p className="text-gray-300 mt-2">Lorem Ipsum is simply dummy text of the printing</p>
+          <Link href={"/contact-us"}>
+            <button className="mt-6 bg-teal-500 text-white px-6 py-2 rounded-full text-lg font-semibold hover:bg-teal-600 transition">
+              Enquiry Now
+            </button>
+          </Link>
 
-          <button className="mt-6 bg-teal-500 text-white px-6 py-2 rounded-full text-lg font-semibold hover:bg-teal-600 transition">
-            Enquiry Now
-          </button>
         </div>
       </div>
 

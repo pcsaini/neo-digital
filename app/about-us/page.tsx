@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const AboutUs = () => {
     return <>
 
@@ -139,7 +141,7 @@ const AboutUs = () => {
                 <div className=" mx-auto">
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
-                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#EAF3FF]">
+                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#EAF3FF] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-u">
                             <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-xl">
                                 <img src="about-icon-1.png" alt="icon" className="w-8 h-8" />
                             </div>
@@ -148,7 +150,7 @@ const AboutUs = () => {
                         </div>
 
 
-                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#FFEBE6]">
+                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#FFEBE6] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-u">
                             <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-xl">
                                 <img src="about-icon-2.png" alt="icon" className="w-8 h-8" />
                             </div>
@@ -157,7 +159,7 @@ const AboutUs = () => {
                         </div>
 
 
-                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#E5F9FF]">
+                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#E5F9FF] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-u">
                             <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-xl">
                                 <img src="about-icon-3.png" alt="icon" className="w-8 h-8" />
                             </div>
@@ -166,7 +168,7 @@ const AboutUs = () => {
                         </div>
 
 
-                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#FFF3E9]">
+                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#FFF3E9] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-u">
                             <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-xl">
                                 <img src="about-icon-4.png" alt="icon" className="w-8 h-8" />
                             </div>
@@ -189,9 +191,11 @@ const AboutUs = () => {
                     </h1>
                     <p className="text-gray-300 mt-2">Lorem Ipsum is simply dummy text of the printing</p>
 
-                    <button className="mt-6 bg-teal-500 text-white px-6 py-2 rounded-full text-lg font-semibold hover:bg-teal-600 transition">
-                        Enquiry Now
-                    </button>
+                    <Link href={"/contact-us"}>
+                        <button className="mt-6 bg-teal-500 text-white px-6 py-2 rounded-full text-lg font-semibold hover:bg-teal-600 transition">
+                            Enquiry Now
+                        </button>
+                    </Link>
                 </div>
             </section>
 

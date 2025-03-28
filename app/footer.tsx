@@ -2,6 +2,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
     return <>
@@ -12,8 +13,10 @@ const Footer = () => {
             <footer className="container m-auto text-white py-4">
                 <div className="mx-auto flex flex-col md:flex-row justify-between px-6">
                     <div className="text-center md:text-left mb-6 md:mb-0">
-                        <h2 className="text-2xl font-bold text-green-400 inline">NEO</h2>
-                        <span className="text-2xl font-bold"> Digital</span>
+                        <Link href={"/"}>
+                            <h2 className="text-2xl font-bold text-teal-400 inline">NEO
+                                <span className="text-2xl font-bold text-white"> Digital</span> </h2>
+                        </Link>
                         <div className="flex justify-center md:justify-start space-x-4 mt-4">
                             <FaTwitter className="text-white cursor-pointer hover:text-green-600" />
                             <FaFacebook className="text-white cursor-pointer hover:text-green-600" />

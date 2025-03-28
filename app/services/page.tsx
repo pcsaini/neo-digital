@@ -7,6 +7,7 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
+import Link from "next/link";
 import { useState } from "react";
 
 const servicesData = [
@@ -167,9 +168,9 @@ const Services = () => {
                 <h3 className="text-lg font-semibold uppercase tracking-wide text-primary-foreground">Services of <span className="text-teal-400">Neo Digital</span></h3>
                 <h2 className="text-3xl font-bold mt-2 text-primary-foreground">Lorem Ipsum Simply Dummy Text</h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 ">
                     {servicesData?.map((service, index) => (
-                        <div key={index} className="bg-gray-100 p-6 rounded-xl text-black shadow-md" onClick={() => {
+                        <div key={index} className="bg-gray-100 p-6 rounded-xl text-black shadow-md transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up" onClick={() => {
                             setViewDialog(!viewDialog);
                             setServiceContent(service);
                         }}>
@@ -269,9 +270,11 @@ const Services = () => {
                     </h1>
                     <p className="text-gray-300 mt-2">Lorem Ipsum is simply dummy text of the printing</p>
 
-                    <button className="mt-6 bg-teal-500 text-white px-6 py-2 rounded-full text-lg font-semibold hover:bg-teal-600 transition">
-                        Enquiry Now
-                    </button>
+                    <Link href={"/contact-us"}>
+                        <button className="mt-6 bg-teal-500 text-white px-6 py-2 rounded-full text-lg font-semibold hover:bg-teal-600 transition">
+                            Enquiry Now
+                        </button>
+                    </Link>
                 </div>
             </section>
 
@@ -279,17 +282,16 @@ const Services = () => {
         </div>
 
         <Dialog open={viewDialog} onOpenChange={setViewDialog}>
-            <DialogContent className="lg:max-w-[1200px]">
-                <DialogHeader>
-                    <DialogTitle>{serviceContent?.title!}</DialogTitle>
-                    <DialogDescription>
-                        <div className="bg-black text-white">
+            <DialogContent className="bg-black lg:max-w-[1200px] h-[80vh] overflow-y-auto ">
+                <DialogTitle></DialogTitle>
+                    {/* <DialogDescription> */}
+                        <div className="bg-black text-white mt-4">
                             <section className="py-10 px-6 md:px-10 lg:px-10">
                                 <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                                     <div>
-                                        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                                    <p className="text-3xl md:text-4xl font-bold mb-6">
                                             {serviceContent?.title!}
-                                        </h2>
+                 </p>
                                         <p className="text-gray-300 text-lg leading-relaxed mb-6">
                                             {serviceContent?.description!}
                                         </p>
@@ -321,8 +323,7 @@ const Services = () => {
                             </section>
 
                         </div>
-                    </DialogDescription>
-                </DialogHeader>
+                    {/* </DialogDescription> */}
             </DialogContent>
         </Dialog>
     </>

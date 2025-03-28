@@ -1,11 +1,35 @@
 'use client';
 import Link from 'next/link'
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
   const [showNav, setShowNav] = useState(false)
+  const pathname = usePathname()
 
 
+  const navArr = [
+    {
+      id: 1,
+      route: '/',
+      name: "Home"
+    },
+    {
+      id: 2,
+      route: '/services',
+      name: "Services"
+    },
+    {
+      id: 3,
+      route: '/about-us',
+      name: "About Us"
+    },
+    {
+      id: 4,
+      route: '/contact-us',
+      name: "Contact Us"
+    }
+  ]
   return <>
 
 
@@ -14,17 +38,19 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
 
         <h1 className="text-2xl font-bold">
+          <Link href={"/"}>
           <span className="text-teal-400">NEO</span> Digital
+          </Link>
         </h1>
 
 
         <nav className="hidden md:flex space-x-8">
-          <Link href="/" className="text-teal-400 font-semibold relative after:block after:h-0.5 after:bg-teal-400 after:w-full after:scale-x-100">
-            Home
+        
+        {navArr?.map((nav) => (
+          <Link href={nav?.route} className={`hover:text-teal-400 font-semibold relative ${pathname === nav?.route ? 'text-teal-400  after:block after:h-0.5 after:bg-teal-400 after:w-full after:scale-x-100 ': ""}`}>
+            {nav?.name}
           </Link>
-          <Link href="/about-us" className="text-gray-300 hover:text-teal-400 transition">About Us</Link>
-          <Link href="/services" className="text-gray-300 hover:text-teal-400 transition">Our Services</Link>
-          <Link href="/contact-us" className="text-gray-300 hover:text-teal-400 transition">Contact Us</Link>
+        ))}
         </nav>
 
 
@@ -35,17 +61,17 @@ const Header = () => {
         </button>
       </div>
     </header>
-
     {showNav ? <nav className=''>
 
 
-      <div className="bg-gray-500 text-white space-y-4 px-6 py-4">
-            <Link href="/" className="block hover:text-gray-300">Home</Link>
-            <Link href="/about-us" className="block hover:text-gray-300">About</Link>
-            <Link href="/services" className="block hover:text-gray-300">Services</Link>
-            <Link href="/contact-us" className="block hover:text-gray-300">Contact</Link>
-        </div>
+      <div className="absolute w-[300px] right-[10px] bg-gray-700 text-white space-y-4 px-4 py-4 transition-all duration-300">
+      {navArr?.map((nav) => (
+          <Link href={nav?.route} className={`block hover:text-teal-400 font-semibold relative border-b-1 border-[#9d9c9c] pb-3 ${pathname === nav?.route ? 'text-teal-400 ': ""}`}>
+            {nav?.name}
+          </Link>
+        ))}
 
+        </div>
 
 
     </nav> : ""}
