@@ -22,7 +22,7 @@ export default function Home() {
 
 
           <div className="mt-10 lg:mt-0 flex justify-center">
-            <img src="banner-img.png" alt="Marketing Solutions" className="max-w-xs lg:max-w-md" />
+            <img src="banner-img.png" alt="Marketing Solutions" title="Digital Solutions" className="max-w-xs lg:max-w-md" />
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
 
           <div className="bg-white rounded-lg shadow-lg overflow-hidden text-left transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
-            <img src="demo-img-1.png" alt="Tech Image" className="w-full h-56 object-cover" />
+            <img src="demo-img-1.png" alt="digital services" title="digital services"  className="w-full h-56 object-cover" />
             <div className="p-4">
               <h3 className="text-lg font-semibold">Web & Mobile Application</h3>
               <p className="text-teal-500 font-bold">DEMO</p>
@@ -49,7 +49,7 @@ export default function Home() {
 
 
           <div className="bg-white rounded-lg shadow-lg overflow-hidden text-left transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
-            <img src="demo-img-1.png" alt="Tech Image" className="w-full h-56 object-cover" />
+            <img src="demo-img-1.png" alt="digital services" title="digital services" className="w-full h-56 object-cover" />
             <div className="p-4">
               <h3 className="text-lg font-semibold">Web & Mobile Application</h3>
               <p className="text-teal-500 font-bold">DEMO</p>
@@ -58,7 +58,7 @@ export default function Home() {
 
 
           <div className="bg-white rounded-lg shadow-lg overflow-hidden text-left transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
-            <img src="demo-img-1.png" alt="Tech Image" className="w-full h-56 object-cover" />
+            <img src="demo-img-1.png" alt="digital services" title="digital services" className="w-full h-56 object-cover" />
             <div className="p-4">
               <h3 className="text-lg font-semibold">Web & Mobile Application</h3>
               <p className="text-teal-500 font-bold">DEMO</p>

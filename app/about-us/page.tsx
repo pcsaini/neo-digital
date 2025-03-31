@@ -10,7 +10,7 @@ const AboutUs = () => {
                 <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
 
                     <div className="">
-                        <img src="about-img-1.png" alt="about image" className="w-full max-w-sm sm:max-w-md lg:max-w-lg" />
+                        <img src="about-img-1.png" alt="developemnt services" title="developemnt services" className="w-full max-w-sm sm:max-w-md lg:max-w-lg" />
                     </div>
 
 
@@ -53,7 +53,7 @@ const AboutUs = () => {
                     </div>
 
                     <div className="grid justify-items-end">
-                        <img src="about-img-2.png" alt="Vision Graphic" className="w-full max-w-xs sm:max-w-sm md:max-w-md" />
+                        <img src="about-img-2.png" alt="developemnt services" title="developemnt services" className="w-full max-w-xs sm:max-w-sm md:max-w-md" />
                     </div>
 
                 </div>
@@ -141,36 +141,36 @@ const AboutUs = () => {
                 <div className=" mx-auto">
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
-                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#EAF3FF] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-u">
+                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#EAF3FF] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
                             <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-xl">
-                                <img src="about-icon-1.png" alt="icon" className="w-8 h-8" />
+                                <img src="about-icon-1.png" alt="services icon" title="services icon" className="w-8 h-8" />
                             </div>
                             <h3 className="mt-4 font-bold text-lg">Machine Learning</h3>
                             <p className="text-gray-600 text-center mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         </div>
 
 
-                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#FFEBE6] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-u">
+                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#FFEBE6] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
                             <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-xl">
-                                <img src="about-icon-2.png" alt="icon" className="w-8 h-8" />
+                                <img src="about-icon-2.png" alt="services icon" title="services icon" className="w-8 h-8" />
                             </div>
                             <h3 className="mt-4 font-bold text-lg">Web3</h3>
                             <p className="text-gray-600 text-center mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         </div>
 
 
-                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#E5F9FF] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-u">
+                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#E5F9FF] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
                             <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-xl">
-                                <img src="about-icon-3.png" alt="icon" className="w-8 h-8" />
+                                <img src="about-icon-3.png" alt="services icon" title="services icon" className="w-8 h-8" />
                             </div>
                             <h3 className="mt-4 font-bold text-lg">Mobile Application</h3>
                             <p className="text-gray-600 text-center mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         </div>
 
 
-                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#FFF3E9] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-u">
+                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#FFF3E9] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
                             <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-xl">
-                                <img src="about-icon-4.png" alt="icon" className="w-8 h-8" />
+                                <img src="about-icon-4.png" alt="services icon" title="services icon" className="w-8 h-8" />
                             </div>
                             <h3 className="mt-4 font-bold text-lg">Marketing</h3>
                             <p className="text-gray-600 text-center mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>

@@ -8,21 +8,21 @@ const ContactUs = () => {
                 <div className="mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-                        <div className="bg-[#DDE8E6] rounded-2xl p-6 shadow-lg flex flex-col items-center text-center">
-                            <img src="contact-icon-1.png" alt="icon" className="w-12 h-12 mb-4" />
+                        <div className="bg-[#DDE8E6] rounded-2xl p-6 shadow-lg flex flex-col items-center text-center transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
+                            <img src="contact-icon-1.png" alt="phone icon" title="phone icon" className="w-12 h-12 mb-4" />
                             <h3 className="font-bold text-lg">PHONE</h3>
                             <p className="text-gray-600 mt-2">+91-9012345678</p>
                         </div>
 
-                        <div className="bg-[#DDE8E6] rounded-2xl p-6 shadow-lg flex flex-col items-center text-center">
-                            <img src="contact-icon-1.png" alt="icon" className="w-12 h-12 mb-4" />
+                        <div className="bg-[#DDE8E6] rounded-2xl p-6 shadow-lg flex flex-col items-center text-center transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
+                            <img src="contact-icon-1.png" alt="mail icon" title="mail icon" className="w-12 h-12 mb-4" />
                             <h3 className="font-bold text-lg">MAIL</h3>
                             <p className="text-gray-600 mt-2">info@gmail.com</p>
                         </div>
 
 
-                        <div className="bg-[#DDE8E6] rounded-2xl p-6 shadow-lg flex flex-col items-center text-center">
-                            <img src="contact-icon-1.png" alt="icon" className="w-12 h-12 mb-4" />
+                        <div className="bg-[#DDE8E6] rounded-2xl p-6 shadow-lg flex flex-col items-center text-center transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
+                            <img src="contact-icon-1.png" alt="address icon" title="address icon" className="w-12 h-12 mb-4" />
                             <h3 className="font-bold text-lg">ADDRESS</h3>
                             <p className="text-gray-600 mt-2">1234, Patel Marg, Mansarovar, Jaipur, Rajasthan - 302020</p>
                         </div>
@@ -37,7 +37,7 @@ const ContactUs = () => {
                 <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
 
                     <div className="w-full flex justify-center">
-                        <img src="contact-img.png" alt="Contact Illustration" className="w-full max-w-md" />
+                        <img src="contact-img.png" alt="contact support" title="contact support" className="w-full max-w-md" />
                     </div>
 
 
@@ -86,8 +86,6 @@ const ContactUs = () => {
 
 
         </div>
-
-
 
 
 
