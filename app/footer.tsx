@@ -44,7 +44,7 @@ const Footer = () => {
 
 
                 <div className="text-center text-sm text-gray-400 mt-6 border-t border-gray-700 pt-6">
-                    ©2025 <span className="text-green-400 font-semibold">NEO DIGITAL</span>. All rights reserved.
+                    ©2025 <span className="text-teal-400 font-semibold">NEO DIGITAL</span>. All rights reserved.
                 </div>
             </footer>
 

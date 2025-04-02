@@ -224,8 +224,8 @@ const Services = () => {
                 <h2 className="text-3xl font-bold mt-2 text-primary-foreground">Lorem Ipsum Simply Dummy Text</h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-1 lg:grid-cols-5 justify-items-center mt-12 gap-6">
-                    <div className="text-center max-w-xs">
-                        <div className="bg-white p-4 rounded-lg inline-block shadow-lg">
+                    <div className="text-center max-w-xs ">
+                        <div className="bg-white p-4 rounded-lg inline-block shadow-lg transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
                             <img src="step-1.png" alt="Icon 1" />
                         </div>
                         <h3 className="text-teal-400 mt-4 font-semibold">Lorem Ipsum Dummy Text</h3>
@@ -237,7 +237,7 @@ const Services = () => {
                     </div>
 
                     <div className="text-center max-w-xs">
-                        <div className="bg-white p-4 rounded-lg inline-block shadow-lg">
+                        <div className="bg-white p-4 rounded-lg inline-block shadow-lg transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
                             <img src="step-2.png" alt="Icon 2" />
                         </div>
                         <h3 className="text-teal-400 mt-4 font-semibold">Lorem Ipsum Dummy Text</h3>
@@ -249,7 +249,7 @@ const Services = () => {
                     </div>
 
                     <div className="text-center max-w-xs">
-                        <div className="bg-white p-4 rounded-lg inline-block shadow-lg">
+                        <div className="bg-white p-4 rounded-lg inline-block shadow-lg transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
                             <img src="step-3.png" alt="Icon 3" />
                         </div>
                         <h3 className="text-teal-400 mt-4 font-semibold">Your Content Goes Here</h3>

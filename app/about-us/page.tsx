@@ -54,6 +54,8 @@ const AboutUs = () => {
 
                     <div className="grid justify-items-end">
                         <img src="about-img-2.png" alt="developemnt services" title="developemnt services" className="w-full max-w-xs sm:max-w-sm md:max-w-md" />
+
+
                     </div>
 
                 </div>
@@ -141,8 +143,8 @@ const AboutUs = () => {
                 <div className=" mx-auto">
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
-                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#EAF3FF] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
-                            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-xl">
+                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-10 shadow-lg flex flex-col items-center bg-[#EAF3FF] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
+                            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-xl animate-bounce">
                                 <img src="about-icon-1.png" alt="services icon" title="services icon" className="w-8 h-8" />
                             </div>
                             <h3 className="mt-4 font-bold text-lg">Machine Learning</h3>
@@ -150,8 +152,8 @@ const AboutUs = () => {
                         </div>
 
 
-                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#FFEBE6] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
-                            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-xl">
+                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-10 shadow-lg flex flex-col items-center bg-[#FFEBE6] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
+                            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-xl animate-bounce">
                                 <img src="about-icon-2.png" alt="services icon" title="services icon" className="w-8 h-8" />
                             </div>
                             <h3 className="mt-4 font-bold text-lg">Web3</h3>
@@ -159,8 +161,8 @@ const AboutUs = () => {
                         </div>
 
 
-                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#E5F9FF] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
-                            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-xl">
+                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-10 shadow-lg flex flex-col items-center bg-[#E5F9FF] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
+                            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-xl animate-bounce">
                                 <img src="about-icon-3.png" alt="services icon" title="services icon" className="w-8 h-8" />
                             </div>
                             <h3 className="mt-4 font-bold text-lg">Mobile Application</h3>
@@ -168,8 +170,8 @@ const AboutUs = () => {
                         </div>
 
 
-                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-7 shadow-lg flex flex-col items-center bg-[#FFF3E9] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
-                            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-xl">
+                        <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-10 shadow-lg flex flex-col items-center bg-[#FFF3E9] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
+                            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-xl animate-bounce">
                                 <img src="about-icon-4.png" alt="services icon" title="services icon" className="w-8 h-8" />
                             </div>
                             <h3 className="mt-4 font-bold text-lg">Marketing</h3>

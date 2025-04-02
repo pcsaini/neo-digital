@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import DotLottieAnimation from "@/components/DotLottieAnimation";
+// import MyLottieComponent from "./components/MyLottieComponent";
+
 
 export default function Home() {
   return (
@@ -9,7 +12,7 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mx-auto items-center justify-between">
 
           <div className="text-center lg:text-left">
-            <h2 className="text-4xl font-extrabold">
+            <h2 className="text-4xl font-extrabold pr-2 animate-bounce">
               Our Expertise In <span className="text-teal-400">Marketing Solutions</span>
             </h2>
             <p className="text-gray-300 text-lg mt-3">
@@ -23,6 +26,11 @@ export default function Home() {
 
           <div className="mt-10 lg:mt-0 flex justify-center">
             <img src="banner-img.png" alt="Marketing Solutions" title="Digital Solutions" className="max-w-xs lg:max-w-md" />
+
+
+            {/* <DotLottieReact src="https://lottie.host/bad20bd1-aa9a-4885-b3bc-cd1d1c036759/wkl9CwSWrn.lottie" loop autoplay/> */}
+
+
           </div>
         </div>
       </div>
@@ -40,7 +48,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
 
           <div className="bg-white rounded-lg shadow-lg overflow-hidden text-left transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
-            <img src="demo-img-1.png" alt="digital services" title="digital services"  className="w-full h-56 object-cover" />
+            <img src="demo-img-1.png" alt="digital services" title="digital services" className="w-full h-56 object-cover" />
             <div className="p-4">
               <h3 className="text-lg font-semibold">Web & Mobile Application</h3>
               <p className="text-teal-500 font-bold">DEMO</p>
@@ -88,11 +96,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url(/story-img.jpg)] bg-cover bg-center"></div>
 
         <div className="container relative z-10 max-w-3xl px-6 text-white md:px-12 lg:px-16">
-          <h4 className="text-sm font-semibold tracking-wider text-white-400">
+          <h4 className="text-sm font-semibold tracking-wider text-white-400 border-l-4 border-teal-400 pl-2 inline-block">
             STORY OF <span className="text-teal-400">NEO</span> DIGITAL
           </h4>
           <h2 className="mt-2 text-2xl font-bold md:text-4xl lg:text-4xl">
-            We Have The
+            We Have The <span className="text-teal-400">Best Partners</span>
           </h2>
           <p className="mt-4 text-base leading-relaxed md:text-lg">
             NEO DIGITAL is a team of talented developers committed to affordable,
@@ -125,7 +133,7 @@ export default function Home() {
         <p className="text-gray-300 text-lg text-center">Lorem Ipsum is simply dummy text of the printing</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-          <div className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto border-b-6 border-teal-500">
+          <div className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto border-b-6 border-teal-500 transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
             <div className="flex items-center space-x-4">
               <div className="w-14 h-14 flex items-center justify-center bg-teal-100 rounded-full">
                 <span className="text-teal-600 text-xl font-semibold">01</span>
@@ -139,7 +147,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto border-b-6 border-teal-500">
+          <div className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto border-b-6 border-teal-500 transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
             <div className="flex items-center space-x-4">
               <div className="w-14 h-14 flex items-center justify-center bg-teal-100 rounded-full">
                 <span className="text-teal-600 text-xl font-semibold">02</span>
@@ -154,7 +162,7 @@ export default function Home() {
           </div>
 
 
-          <div className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto border-b-6 border-teal-500">
+          <div className="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto border-b-6 border-teal-500 transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">
             <div className="flex items-center space-x-4">
               <div className="w-14 h-14 flex items-center justify-center bg-teal-100 rounded-full">
                 <span className="text-teal-600 text-xl font-semibold">03</span>
