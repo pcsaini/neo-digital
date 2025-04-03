@@ -6,6 +6,7 @@ import DotLottieAnimation from "@/components/DotLottieAnimation";
 
 export default function Home() {
   return (
+
     <div className="bg-black">
 
       <div className="container m-auto text-white py-16 px-6">
@@ -202,6 +203,9 @@ export default function Home() {
 
 
     </div>
+
+
+
 
 
 
