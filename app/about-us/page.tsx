@@ -202,9 +202,6 @@ const AboutUs = () => {
             </section>
 
 
-
-
-
         </div>
 
     </>

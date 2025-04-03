@@ -76,18 +76,13 @@ const ContactUs = () => {
 
             <div className="grid grid-cols-1 bg-gray-100">
                 <div className="w-full  overflow-hidden rounded-lg">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.7165342136786!2d75.75537857605241!3d26.848966876685182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db578bde235d7%3A0xefe223d97dc0ae88!2sSignatureTech%20IT%20Solutions%20LLP!5e0!3m2!1sen!2sin!4v1742981262988!5m2!1sen!2sin" 
-                    width="100%" height="450" ></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.7165342136786!2d75.75537857605241!3d26.848966876685182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db578bde235d7%3A0xefe223d97dc0ae88!2sSignatureTech%20IT%20Solutions%20LLP!5e0!3m2!1sen!2sin!4v1742981262988!5m2!1sen!2sin"
+                        width="100%" height="450" ></iframe>
                 </div>
             </div>
 
 
-
-
-
         </div>
-
-
 
 
     </>
