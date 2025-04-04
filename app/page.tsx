@@ -1,6 +1,7 @@
+'use client';
 import Image from "next/image";
 import Link from "next/link";
-import DotLottieAnimation from "@/components/DotLottieAnimation";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 // import MyLottieComponent from "./components/MyLottieComponent";
 
 
@@ -26,10 +27,10 @@ export default function Home() {
 
 
           <div className="mt-10 lg:mt-0 flex justify-center">
-            <img src="banner-img.png" alt="Marketing Solutions" title="Digital Solutions" className="max-w-xs lg:max-w-md" />
+            {/* <img src="banner-img.png" alt="Marketing Solutions" title="Digital Solutions" className="max-w-xs lg:max-w-md" /> */}
 
 
-            {/* <DotLottieReact src="https://lottie.host/bad20bd1-aa9a-4885-b3bc-cd1d1c036759/wkl9CwSWrn.lottie" loop autoplay/> */}
+            <DotLottieReact src="https://lottie.host/bad20bd1-aa9a-4885-b3bc-cd1d1c036759/wkl9CwSWrn.lottie" loop autoplay/>
 
 
           </div>

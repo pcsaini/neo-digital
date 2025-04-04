@@ -1,3 +1,7 @@
+'use client';
+import Image from "next/image";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
 const ContactUs = () => {
     return <>
 
@@ -37,7 +41,9 @@ const ContactUs = () => {
                 <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
 
                     <div className="w-full flex justify-center">
-                        <img src="contact-img.png" alt="contact support" title="contact support" className="w-full max-w-md" />
+                        {/* <img src="contact-img.png" alt="contact support" title="contact support" className="w-full max-w-md" /> */}
+
+                        <DotLottieReact src="https://lottie.host/bad20bd1-aa9a-4885-b3bc-cd1d1c036759/wkl9CwSWrn.lottie" loop autoplay/>
                     </div>
 
 

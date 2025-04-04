@@ -1,4 +1,6 @@
+'use client';
 import Link from "next/link";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const AboutUs = () => {
     return <>
@@ -11,6 +13,15 @@ const AboutUs = () => {
 
                     <div className="">
                         <img src="about-img-1.png" alt="developemnt services" title="developemnt services" className="w-full max-w-sm sm:max-w-md lg:max-w-lg" />
+
+
+                        {/* <DotLottieReact src="https://lottie.host/bad20bd1-aa9a-4885-b3bc-cd1d1c036759/wkl9CwSWrn.lottie" loop autoplay/> */}
+                        
+
+
+
+
+
                     </div>
 
 
