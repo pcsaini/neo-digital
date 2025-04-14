@@ -4,15 +4,16 @@ import { getServiceById } from "@/features/services/actions/service-actions";
 import { ServiceForm } from "@/features/services/components/service-form";
 
 interface EditServicePageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export default async function EditServicePage({
   params,
 }: EditServicePageProps) {
-  const result = await getServiceById(params.id);
+  const { id } = await params;
+  const result = await getServiceById(id);
 
   if (!result.success || !result.data) {
     notFound();
