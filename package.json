@@ -7,6 +7,7 @@
     "migrate": "npx prisma migrate dev",
     "seed": "npx prisma db seed",
     "dev": "next dev --turbopack",
+    "prebuild": "pnpm generate && pnpm migrate && pnpm seed",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
