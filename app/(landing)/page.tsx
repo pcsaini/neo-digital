@@ -1,13 +1,51 @@
-"use client";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Image from "next/image";
 import TypingAnimation from "@/components/ui/typing-animation";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-import { AnimatedCard } from "@/components/ui/animated-card";
 import Link from "next/link";
+import LottiePlayer from "@/components/lottie-player";
+import { getServices } from "@/features/services/actions/service-actions";
+import { Service } from "@/features/services/types";
+import { ServiceCard } from "@/components/ui/service-card";
+import { Metadata } from "next";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title:
+    "Neo Digital - A leading company to build next level digital solutions",
+  description:
+    "Neo Digital - A leading company to build next level digital solutions",
+  keywords: ["Neo Digital", "Digital Marketing", "Web Development", "SEO"],
+  openGraph: {
+    title:
+      "Neo Digital - A leading company to build next level digital solutions",
+    description:
+      "Neo Digital - A leading company to build next level digital solutions",
+    type: "website",
+    url: "https://neodgtl.com",
+    siteName: "Neo Digital",
+  },
+  twitter: {
+    title:
+      "Neo Digital - A leading company to build next level digital solutions",
+    description:
+      "Neo Digital - A leading company to build next level digital solutions",
+    card: "summary_large_image",
+    site: "@neodigital",
+    creator: "@neodigital",
+  },
+};
+
+export default async function Home() {
   const typingTexts = ["Marketing", "Solutions", "Presence"];
+
+  const result = await getServices({
+    status: "published",
+    limit: 3,
+    orderBy: "createdAt",
+    order: "asc",
+  });
+  const services = result.success
+    ? (result.data as Service[])
+    : ([] as Service[]);
 
   return (
     <div>
@@ -15,16 +53,16 @@ export default function Home() {
         <div className="max-w-7xl m-auto text-white py-35 px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mx-auto items-center justify-between">
             <div className="text-center lg:text-left">
-              <h1 className="text-4xl md:text-6xl font-bold">
+              <h1 className="text-4xl md:text-6xl font-bold animate-appear opacity-0 delay-300">
                 Our Expertise In Digital <TypingAnimation texts={typingTexts} />
               </h1>
-              <p className="text-gray-300 text-lg mt-3">
+              <p className="text-gray-300 text-lg mt-3 animate-appear opacity-0 delay-500">
                 We combine creativity with strategy to create campaigns that not
                 only look great — but perform even better. Let’s build something
                 your audience can’t ignore
               </p>
               <Link href="/services">
-                <button className="mt-6 relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none">
+                <button className="mt-6 relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none animate-appear opacity-0 delay-700">
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00bba7_0%,#393BB2_50%,#7ccf00_100%)]" />
                   <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-10 py-1 text-sm font-medium text-white backdrop-blur-3xl">
                     Explore Our Services
@@ -37,11 +75,7 @@ export default function Home() {
               className="mt-10 lg:mt-0 flex justify-center"
               style={{ height: "500px" }}
             >
-              <DotLottieReact
-                src="https://lottie.host/bad20bd1-aa9a-4885-b3bc-cd1d1c036759/wkl9CwSWrn.lottie"
-                loop
-                autoplay
-              />
+              <LottiePlayer url="/lotties/hero.json" />
             </div>
           </div>
         </div>
@@ -49,30 +83,19 @@ export default function Home() {
 
       <section>
         <div className="max-w-7xl m-auto text-center py-25 px-4">
-          <h1 className="bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-4xl">
+          <h1 className="bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-4xl animate-appear opacity-0 delay-300">
             Solutions That Drive <span className="text-teal-400">Results</span>
           </h1>
-          <div className="w-40 h-1 bg-teal-400 mx-auto my-4"></div>
-          <p className="text-gray-300 text-lg">
+          <div className="w-40 h-1 bg-teal-400 mx-auto my-4 animate-appear opacity-0 delay-500"></div>
+          <p className="text-gray-300 text-lg animate-appear opacity-0 delay-700">
             From SEO and social media to paid ads and content — we turn strategy
             into success
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-            <AnimatedCard
-              title="Social media services"
-              imageUrl="https://images.unsplash.com/photo-1544077960-604201fe74bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80"
-            />
-
-            <AnimatedCard
-              title="Project management services"
-              imageUrl="https://images.unsplash.com/photo-1544077960-604201fe74bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80"
-            />
-
-            <AnimatedCard
-              title="Concept & design consultancy"
-              imageUrl="https://images.unsplash.com/photo-1544077960-604201fe74bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80"
-            />
+            {services.map((service) => (
+              <ServiceCard key={service.id} service={service} />
+            ))}
           </div>
         </div>
       </section>
@@ -96,7 +119,7 @@ export default function Home() {
             We Build With the Best Minds in the{" "}
             <span className="text-teal-400">Digital World</span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed md:text-lg text-white">
+          <p className="mt-4 text-base leading-relaxed md:text-lg text-white animate-appear">
             At NEO DIGITAL, we’re more than a team — we’re a collective of
             innovative thinkers, marketers, designers, and developers dedicated
             to delivering high-impact digital solutions

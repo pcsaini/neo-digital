@@ -1,26 +1,21 @@
-"use client";
-
 import Header from "@/app/(landing)/header";
 import { ReactNode } from "react";
-import CTA from "@/app/(landing)/cta";
-import { Footerdemo } from "@/components/ui/footer-section";
-import { usePathname } from "next/navigation";
+import { Footer } from "@/components/ui/footer-section";
+import { getCachedSettings } from "@/lib/settings";
 
-export default function LandingLayout({
+export default async function LandingLayout({
   children,
 }: Readonly<{
   children: ReactNode;
 }>) {
-  const pathname = usePathname();
-  console.log(pathname);
+  const settings = await getCachedSettings();
+  const safeSettings: Record<string, string> = settings || {};
+
   return (
     <>
-      <Header />
+      <Header settings={safeSettings} />
       {children}
-
-      {/* if current route is contact us the no need to show this */}
-      {pathname !== "/contact-us" && <CTA />}
-      <Footerdemo />
+      <Footer settings={safeSettings} />
     </>
   );
 }

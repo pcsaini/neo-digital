@@ -54,7 +54,7 @@ export function HoverBorderGradient({
       }, duration * 1000);
       return () => clearInterval(interval);
     }
-  }, [hovered]);
+  }, [duration, hovered]);
   return (
     <Tag
       onMouseEnter={() => {

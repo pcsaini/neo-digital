@@ -8,40 +8,41 @@ const prisma = new PrismaClient();
  * Usage: npx ts-node scripts/seed-admin.ts
  */
 export async function seedSuperAdmin() {
-    try {
-        console.log("Starting super admin creation...");
+  try {
+    const name = "Super Admin";
+    const email = "info@neodgtl.com";
+    const password = "12345678";
 
-        const existingSuperAdmin = await prisma.user.findFirst();
+    console.log("Starting super admin creation...");
 
-        if (existingSuperAdmin) {
-            console.log("Super admin already exists:");
-            console.log(`Email: ${existingSuperAdmin.email}`);
-            console.log("To new a new admin, please delete the existing one first.");
-            return;
-        }
+    const existingSuperAdmin = await prisma.users.findFirst({
+      where: {
+        email,
+      },
+    });
 
-        const name = "Super Admin";
-        const email = "admin@neodigital.com";
-        const password = "12345678";
-
-        const hashedPassword = await hash(password, 10);
-
-        await prisma.user.create({
-            data: {
-                name,
-                email,
-                password: hashedPassword,
-            },
-        });
-
-        console.log(`Super admin created successfully:`);
-        console.log(`Name: ${name}`);
-        console.log(`Email: ${email}`);
-        console.log(`Password: ${password}`);
-    } catch (error) {
-        console.error("Error creating super admin:", error);
-        process.exit(1);
-    } finally {
-        await prisma.$disconnect();
+    if (existingSuperAdmin) {
+      console.log("Super admin already exists:");
+      console.log(`Email: ${existingSuperAdmin.email}`);
+      console.log("To new a new admin, please delete the existing one first.");
+      return;
     }
+
+    const hashedPassword = await hash(password, 10);
+
+    await prisma.users.create({
+      data: {
+        name,
+        email,
+        password: hashedPassword,
+      },
+    });
+
+    console.log(`Super admin created successfully:`);
+  } catch (error) {
+    console.error("Error creating super admin:", error);
+    process.exit(1);
+  } finally {
+    await prisma.$disconnect();
+  }
 }

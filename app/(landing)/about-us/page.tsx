@@ -1,48 +1,70 @@
-"use client";
+import LottiePlayer from "@/components/lottie-player";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title:
+    "Neo Digital - A leading company to build next level digital solutions",
+  description:
+    "Neo Digital - A leading company to build next level digital solutions",
+  keywords: ["Neo Digital", "Digital Marketing", "Web Development", "SEO"],
+  openGraph: {
+    title:
+      "Neo Digital - A leading company to build next level digital solutions",
+    description:
+      "Neo Digital - A leading company to build next level digital solutions",
+    type: "website",
+    url: "https://neodgtl.com",
+    siteName: "Neo Digital",
+  },
+  twitter: {
+    title:
+      "Neo Digital - A leading company to build next level digital solutions",
+    description:
+      "Neo Digital - A leading company to build next level digital solutions",
+    card: "summary_large_image",
+    site: "@neodigital",
+    creator: "@neodigital",
+  },
+};
 
 const AboutUs = () => {
   return (
     <div>
-      <section className="max-w-7xl m-auto text-white py-10 px-6 md:px-12">
+      <section className="max-w-7xl m-auto text-white py-20 px-6 md:px-12">
         <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12 ">
           <div className="h-[600px]">
-            <DotLottieReact
-              src="https://lottie.host/f2d27194-170e-4a06-ac57-8a9b90f33eac/sb6I7JsMYH.lottie"
-              style={{ maxWidth: "600px", maxHeight: "600px" }}
-              loop
-              autoplay
-            />
+            <LottiePlayer url="https://lottie.host/f2d27194-170e-4a06-ac57-8a9b90f33eac/sb6I7JsMYH.lottie" />
           </div>
 
           <div className="text-center lg:text-left">
-            <p className="text-white uppercase text-xs sm:text-sm font-semibold border-l-4 border-teal-400 pl-2 inline-block">
+            <p className="text-white uppercase text-xs sm:text-sm font-semibold border-l-4 border-teal-400 pl-2 inline-block animate-appear opacity-0 delay-300">
               Meaning of NEO DIGITAL
             </p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 leading-tight animate-appear opacity-0 delay-500">
               <span className="text-teal-400">NEO</span> DIGITAL Is Focused On{" "}
               <span className="text-teal-400"> Great Collaboration</span>
             </h2>
-            <p className="mt-4 text-gray-300 text-sm sm:text-base">
+            <p className="mt-4 text-gray-300 text-sm sm:text-base animate-appear opacity-0 delay-700">
               NEO DIGITAL represents innovation, versatility, and end-to-end
               digital transformation. We are a one-stop destination for all
               technology solutions — from strategy and design to full-scale
               development and marketing.
             </p>
-            <p className="mt-4 text-gray-400 text-sm sm:text-base">
+            <p className="mt-4 text-gray-400 text-sm sm:text-base animate-appear opacity-0 delay-700">
               At our core, we believe in building strong collaborations with
               clients, partners, and teams to create scalable, future-ready
               solutions that truly make an impact.
             </p>
-            <p className="mt-4 text-gray-400 text-sm sm:text-base">
+            <p className="mt-4 text-gray-400 text-sm sm:text-base animate-appear opacity-0 delay-700">
               Together, we turn ideas into digital realities
             </p>
           </div>
         </div>
       </section>
 
-      <section className="max-w-7xl m-auto text-white pt-10 pb-20 px-6 md:px-12">
+      <section className="max-w-7xl m-auto text-white pt-20 pb-20 px-6 md:px-12">
         <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
           <div className="text-center lg:text-left">
             <p className="text-white uppercase text-xs sm:text-sm font-semibold border-l-4 border-teal-400 pl-2 inline-block">
@@ -68,15 +90,11 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <DotLottieReact
-            src="https://lottie.host/f4a50a35-4e7d-4412-b831-45532fb1a249/7mZXkRyDK4.lottie"
-            loop
-            autoplay
-          />
+          <LottiePlayer url="https://lottie.host/f4a50a35-4e7d-4412-b831-45532fb1a249/7mZXkRyDK4.lottie" />
         </div>
       </section>
 
-      <section className="relative bg-[url(/about-count-img.jpg)] bg-cover bg-center bg-no-repeat py-10 px-6 md:px-12">
+      <section className="relative bg-[url(/about-count-img.jpg)] bg-cover bg-center bg-no-repeat py-30 px-6 md:px-12">
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="max-w-7xl m-auto relative mx-auto text-center text-white">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-8">
@@ -110,7 +128,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className="max-w-7xl m-auto relative py-10 px-6">
+      <section className="max-w-7xl m-auto relative py-32 px-6">
         <div className="mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-15 p-4">
             <div className="min-w-[250px] sm:min-w-[300px] rounded-2xl p-10 shadow-lg flex flex-col items-center bg-[#EAF3FF] transform transition duration-500 ease-in-out hover:scale-105 animate-fade-in-up">

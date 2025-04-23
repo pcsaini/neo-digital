@@ -3,15 +3,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getServiceById } from "@/features/services/actions/service-actions";
 import { ServiceForm } from "@/features/services/components/service-form";
 
-interface EditServicePageProps {
-  params: Promise<{
-    id: string;
-  }>;
-}
-
 export default async function EditServicePage({
   params,
-}: EditServicePageProps) {
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const result = await getServiceById(id);
 
@@ -26,7 +22,7 @@ export default async function EditServicePage({
           <CardTitle>Edit Service: {result.data.name}</CardTitle>
         </CardHeader>
         <CardContent>
-          {/* <ServiceForm mode="edit" initialData={result.data} /> */}
+          <ServiceForm mode="edit" initialData={result.data as any} />
         </CardContent>
       </Card>
     </div>

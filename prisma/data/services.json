@@ -1,0 +1,172 @@
+[
+    {
+        "name": "Software & Web Development",
+        "slug": "software-web-development",
+        "description": "Development of software systems, databases, and websites including updates and patches.",
+        "keywords": [
+            "software development",
+            "web development",
+            "database design",
+            "coding",
+            "system implementation"
+        ],
+        "content": "We specialize in creating robust software systems, dynamic websites, and databases tailored to your business needs. From architecture to implementation, we handle it all.",
+        "image": "",
+        "status": "published"
+    },
+    {
+        "name": "Custom Software Configuration",
+        "slug": "custom-software-configuration",
+        "description": "Modifying and configuring existing software to match your internal business workflows.",
+        "keywords": [
+            "software customization",
+            "application configuration",
+            "system integration",
+            "custom software"
+        ],
+        "content": "We adapt and fine-tune existing applications to meet your specific requirements and ensure seamless integration with your IT environment.",
+        "image": "",
+        "status": "published"
+    },
+    {
+        "name": "IT Consultancy & Facilities Management",
+        "slug": "it-consultancy-facilities-management",
+        "description": "Professional consulting services for IT systems and infrastructure management.",
+        "keywords": [
+            "IT consultancy",
+            "infrastructure management",
+            "IT strategy",
+            "technology planning"
+        ],
+        "content": "Our consultancy services help you plan, manage, and optimize your IT infrastructure, ensuring maximum efficiency and minimal downtime.",
+        "image": "",
+        "status": "published"
+    },
+    {
+        "name": "Integrated Systems Design",
+        "slug": "integrated-systems-design",
+        "description": "Design and planning of systems combining hardware, software, and communication technologies.",
+        "keywords": [
+            "systems design",
+            "IT architecture",
+            "hardware integration",
+            "software systems"
+        ],
+        "content": "We plan and design cohesive IT systems that integrate hardware, software, and networking components for a reliable and scalable digital ecosystem.",
+        "image": "",
+        "status": "published"
+    },
+    {
+        "name": "Digital Content Services",
+        "slug": "digital-content-services",
+        "description": "Creation and management of engaging digital content for online platforms.",
+        "keywords": [
+            "content creation",
+            "digital media",
+            "content marketing",
+            "online content"
+        ],
+        "content": "From blogs to videos, we create compelling digital content that captures attention and strengthens your brand’s online presence.",
+        "image": "",
+        "status": "published"
+    },
+    {
+        "name": "Design & Concept Consultancy",
+        "slug": "design-concept-consultancy",
+        "description": "Creative consulting for branding, design concepts, and visual identity.",
+        "keywords": [
+            "creative consulting",
+            "design strategy",
+            "brand identity",
+            "UX/UI consulting"
+        ],
+        "content": "Our experts help you develop strong visual identities and design strategies that resonate with your audience and enhance user experience.",
+        "image": "",
+        "status": "published"
+    },
+    {
+        "name": "Project Management Services",
+        "slug": "project-management-services",
+        "description": "Comprehensive project management for technology-driven initiatives.",
+        "keywords": [
+            "project management",
+            "tech project planning",
+            "agile delivery",
+            "PMO"
+        ],
+        "content": "We manage projects from conception to delivery, ensuring timely execution, efficient resource use, and alignment with business goals.",
+        "image": "",
+        "status": "published"
+    },
+    {
+        "name": "Digital Marketing",
+        "slug": "digital-marketing",
+        "description": "Marketing services across digital platforms to increase brand awareness and conversions.",
+        "keywords": [
+            "digital marketing",
+            "SEO",
+            "PPC",
+            "email marketing",
+            "online branding"
+        ],
+        "content": "Grow your business with our targeted digital marketing strategies that cover everything from SEO to performance marketing.",
+        "image": "",
+        "status": "published"
+    },
+    {
+        "name": "Online Marketing Services",
+        "slug": "online-marketing-services",
+        "description": "Online advertising and performance-based campaigns for businesses.",
+        "keywords": [
+            "online marketing",
+            "ads management",
+            "lead generation",
+            "performance marketing"
+        ],
+        "content": "We run high-converting online marketing campaigns using data-driven insights to maximize your reach and ROI.",
+        "image": "",
+        "status": "published"
+    },
+    {
+        "name": "Direct Marketing",
+        "slug": "direct-marketing",
+        "description": "Targeted marketing strategies delivered directly to consumers.",
+        "keywords": [
+            "direct marketing",
+            "email campaigns",
+            "sms marketing",
+            "personalized marketing"
+        ],
+        "content": "Engage your audience with personalized marketing messages delivered directly via email, SMS, or other channels.",
+        "image": "",
+        "status": "published"
+    },
+    {
+        "name": "Social Media Services",
+        "slug": "social-media-services",
+        "description": "Management of social media accounts to grow presence and engagement.",
+        "keywords": [
+            "social media management",
+            "Instagram marketing",
+            "Facebook ads",
+            "community engagement"
+        ],
+        "content": "We create and manage social media campaigns that build community, enhance brand image, and drive traffic.",
+        "image": "",
+        "status": "published"
+    },
+    {
+        "name": "Social Media Consultancy",
+        "slug": "social-media-consultancy",
+        "description": "Expert advice and strategies to optimize social media efforts.",
+        "keywords": [
+            "social media consulting",
+            "strategy development",
+            "social growth",
+            "platform optimization"
+        ],
+        "content": "Our consultants help you craft winning social media strategies that align with your goals and drive real results.",
+        "image": "",
+        "status": "published"
+    }
+]

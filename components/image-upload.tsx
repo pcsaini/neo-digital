@@ -26,7 +26,6 @@ export default function ImageUpload({
     }
   }, [value, isLocalFile]);
 
-  // Handle file change
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
 
@@ -44,20 +43,16 @@ export default function ImageUpload({
     }
   };
 
-  // Handle image removal
   const handleRemove = () => {
     setPreview(null);
     setIsLocalFile(false);
     onRemove();
   };
 
-  // Handle URL input
   const handleUrlInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const url = e.target.value;
     setIsLocalFile(false);
     onChange(url);
-
-    // Don't set preview here, it will be set by the useEffect when value changes
   };
 
   return (

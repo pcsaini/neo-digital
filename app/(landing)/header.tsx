@@ -4,8 +4,13 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
-const Header = () => {
+export default function Header({
+  settings,
+}: Readonly<{
+  settings: Record<string, string>;
+}>) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -51,7 +56,19 @@ const Header = () => {
         {/* Logo */}
         <div className="text-xl font-bold text-white">
           <Link href="/">
-            <span className="text-teal-400">NEO</span> Digital
+            {settings?.site_logo ? (
+              <Image
+                src={settings?.site_logo}
+                alt="Logo"
+                width={50}
+                height={50}
+                className="w-auto h-10"
+              />
+            ) : (
+              <>
+                <span className="text-teal-400">NEO</span> Digital{" "}
+              </>
+            )}
           </Link>
         </div>
 
@@ -128,6 +145,4 @@ const Header = () => {
       </div>
     </header>
   );
-};
-
-export default Header;
+}
