@@ -19,6 +19,7 @@ import {
   FaTwitter,
 } from "react-icons/fa6";
 import { Send } from "lucide-react";
+import Image from "next/image";
 
 export function Footer({
   settings,
@@ -45,27 +46,24 @@ export function Footer({
         <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
             <div className="relative">
-              <h2 className="mb-4 text-3xl font-bold tracking-tight">
-                Stay Connected
-              </h2>
-              <p className="mb-6 text-muted-foreground">
-                Join our newsletter for the latest updates and exclusive offers.
+              <Link href="/">
+                {settings?.site_logo ? (
+                  <Image
+                    src={settings?.site_logo}
+                    alt="Logo"
+                    width={50}
+                    height={50}
+                    className="w-auto h-10"
+                  />
+                ) : (
+                  <>
+                    <span className="text-teal-400">NEO</span> Digital{" "}
+                  </>
+                )}
+              </Link>
+              <p className="mb-6 mt-3 text-muted-foreground">
+                {settings?.site_description}
               </p>
-              <form className="relative">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="pr-12 backdrop-blur-sm"
-                />
-                <Button
-                  type="submit"
-                  size="icon"
-                  className="absolute right-1 top-1 h-8 w-8 rounded-full bg-primary text-primary-foreground transition-transform hover:scale-105"
-                >
-                  <Send className="h-4 w-4" />
-                  <span className="sr-only">Subscribe</span>
-                </Button>
-              </form>
               <div className="absolute -right-4 top-0 h-24 w-24 rounded-full bg-primary/10 blur-2xl" />
             </div>
             <div>
@@ -120,19 +118,31 @@ export function Footer({
               <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
               <address className="space-y-2 text-sm not-italic">
                 {settings?.address ? (
-                  <p>{settings?.address}</p>
+                  <p>
+                    <b>Address:</b> {settings?.address}
+                  </p>
                 ) : (
-                  <p>123 Innovation Street</p>
+                  <p>
+                    <b>Address:</b> 123 Innovation Street
+                  </p>
                 )}
                 {settings?.phone ? (
-                  <p>{settings?.phone}</p>
+                  <p>
+                    <b>Phone:</b> {settings?.phone}
+                  </p>
                 ) : (
-                  <p>Phone: +971 55 888 888</p>
+                  <p>
+                    <b>Phone:</b> +971 55 888 888
+                  </p>
                 )}
-                {settings?.email ? (
-                  <p>{settings?.email}</p>
+                {settings?.support_email ? (
+                  <p>
+                    <b>Email:</b> {settings?.support_email}
+                  </p>
                 ) : (
-                  <p>Email: info@neodgtl.com</p>
+                  <p>
+                    <b>Email:</b> info@neodgtl.com
+                  </p>
                 )}
               </address>
             </div>

@@ -35,6 +35,7 @@ export async function createService(data: ServiceFormValues) {
     });
 
     revalidatePath("/admin/services");
+
     return { success: true, data: service };
   } catch (error) {
     console.error("Error creating service:", error);
@@ -147,9 +148,11 @@ export async function updateService(id: string, data: ServiceFormValues) {
       },
     });
 
+
     revalidatePath("/admin/services");
     revalidatePath(`/admin/services/${id}`);
     revalidatePath(`/admin/services/${id}/edit`);
+
     return { success: true, data: service };
   } catch (error) {
     console.error("Error updating service:", error);

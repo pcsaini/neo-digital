@@ -19,10 +19,7 @@ const s3Client =
     : null;
 
 const isLocalEnvironment = () => {
-  return (
-    process.env.NEXT_PUBLIC_NODE_ENV === "development" ||
-    process.env.APP_ENV === "local"
-  );
+  return process.env.NEXT_PUBLIC_STORAGE === "local";
 };
 
 const uploadToS3 = async (

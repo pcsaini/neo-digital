@@ -1,8 +1,8 @@
+import Dashboard from "@/features/dashboard/components/states-component";
+
 export default function DashboardPage() {
-    return (
-        //TODO Make dashboard component in features/dashboard/components
-        <>
-            Dashboard
+    return (<>
+            <Dashboard/>
         </>
 
     )

@@ -36,6 +36,7 @@ import { Badge } from "@/components/ui/badge";
 import { Service } from "../types";
 import { deleteService } from "@/features/services/actions/service-actions";
 import { toast } from "sonner";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 interface ServicesListProps {
   services: Service[];
@@ -103,7 +104,7 @@ export function ServicesList({ services }: ServicesListProps) {
     if (isLottieAnimation(url)) {
       return (
         <div className="relative w-16 h-16 bg-gray-100 rounded overflow-hidden">
-          <Player
+          <DotLottieReact
             autoplay
             loop
             src={url}

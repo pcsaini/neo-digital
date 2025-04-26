@@ -23,18 +23,31 @@ model users {
   updatedAt DateTime @default(now()) @updatedAt
 }
 
+model enquiry {
+  id         String    @id @default(cuid())
+  name       String
+  email      String?
+  phone      String?
+  message    String?
+  service_id String?
+  service    services? @relation(fields: [service_id], references: [id])
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @default(now()) @updatedAt
+}
+
 model services {
-  id          String   @id @default(cuid())
+  id          String    @id @default(cuid())
   name        String
-  slug        String   @unique
+  slug        String    @unique
   description String
   keywords    String[]
-  content     String   @db.Text
+  content     String    @db.Text
   image       String?
-  lottie      String?  @db.Text
-  status      String   @default("draft")
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @default(now()) @updatedAt
+  lottie      String?   @db.Text
+  status      String    @default("draft")
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @default(now()) @updatedAt
+  enquiry     enquiry[]
 }
 
 model settings {
@@ -43,4 +56,12 @@ model settings {
   value     String
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now()) @updatedAt
+}
+
+model visitor {
+  id        String   @id @default(uuid())
+  ipAddress String
+  userAgent String
+  visitedAt DateTime @default(now())
+  route     String
 }

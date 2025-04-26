@@ -22,33 +22,45 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import { Service } from "@/features/services/types";
+import { createEnquiry } from "@/features/enquires/actions/enquiry-action";
+import { toast } from "sonner";
+import { useState } from "react";
+import { Loader2 } from "lucide-react";
 
-const formSchema = z.object({
+export const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Invalid email address"),
   phone: z.string().min(1, "Phone number is required"),
-  service: z.string().min(1, "Please select a service"),
+  service_id: z.string().min(1, "Please select a service"),
   message: z.string().min(1, "Message is required"),
 });
 
 export const ContactForm = ({ services }: { services: Service[] }) => {
+  const [loading, setIsLoading] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
       phone: "",
-      service: "",
+      service_id: "",
       message: "",
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      console.log(values);
-      // Add your form submission logic here
+      setIsLoading(true);
+      const result = await createEnquiry(values);
+      if (!result?.success) {
+        throw new Error(result?.error || "Operation failed");
+      }
+
+      toast("Enquiry saved successfully");
     } catch (error) {
       console.error("Form submission error", error);
+    } finally {
+      setIsLoading(false);
     }
   }
 
@@ -100,7 +112,7 @@ export const ContactForm = ({ services }: { services: Service[] }) => {
 
           <FormField
             control={form.control}
-            name="service"
+            name="service_id"
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormLabel>Select Service</FormLabel>
@@ -148,7 +160,12 @@ export const ContactForm = ({ services }: { services: Service[] }) => {
               </FormItem>
             )}
           />
-          <Button type="submit" className="mt-6 w-full md:w-auto">
+          <Button
+            type="submit"
+            className="mt-6 w-full md:w-auto"
+            disabled={loading}
+          >
+            {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             Submit
           </Button>
         </form>
